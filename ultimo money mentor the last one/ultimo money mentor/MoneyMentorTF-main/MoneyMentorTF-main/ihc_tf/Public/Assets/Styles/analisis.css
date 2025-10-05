@@ -1,0 +1,1292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Variables globales de colores */
+:root{
+    --color-primary: #6C9BCF; /* Color primario */
+    --color-danger: #FF0060; /* Color de peligro */
+    --color-success: #1B9C85; /* Color de éxito */
+    --color-warning: #F7D060; /* Color de advertencia */
+    --color-white: #fff; /* Color blanco */
+    --color-info-dark: #7d8da1; /* Color de información (oscuro) */
+    --color-dark: #363949; /* Color oscuro */
+    --color-light: rgba(132, 139, 200, 0.18); /* Color claro con opacidad */
+    --color-dark-variant: #677483; /* Variante del color oscuro */
+    --color-background: #f6f6f9; /* Color de fondo */
+
+    /* Variables de diseño para bordes y radios */
+    --card-border-radius: 2rem; /* Radio de borde de tarjeta */
+    --border-radius-1: 0.4rem; /* Radio de borde pequeño */
+    --border-radius-2: 1.2rem; /* Radio de borde mediano */
+
+    /* Variables de padding */
+    --card-padding: 1.8rem; /* Padding de tarjeta */
+    --padding-1: 1.2rem; /* Padding pequeño */
+
+    /* Sombra de caja */
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* Variables para modo oscuro */
+
+header {
+    width: 100%; /* Ancho completo */
+    height: 70px; /* Altura del encabezado */
+    background: #2B3D49; /* Color de fondo del encabezado */
+    position: absolute; /* Posicionamiento absoluto */
+    display: flex; /* Flexbox para organizar elementos */
+    align-items: center; /* Alineación centrada verticalmente */
+    z-index: 1; /* Z-index para apilar elementos */
+    transition: .2s; /* Transición suave para cambios */
+    justify-content: space-between; /* Espacio entre elementos */
+    margin-bottom: 20px;
+}
+
+/* Logo */
+header .logo img {
+    width: 5rem; /* Ancho del logo */
+    height: 3rem; /* Alto del logo */
+    object-fit: contain;
+}
+
+/* Título "Bienvenido(a)" */
+header h2 {
+    margin-left: -33rem; /* Margen a la izquierda */
+    color: white; /* Color del texto */
+    font-size: 2rem; /* Tamaño de fuente */
+}
+
+/* Sección de la derecha */
+header .right-section{
+    align-items: flex-start; /* Alineación de los elementos al inicio */
+   align-self: flex-start; /* Alineación del elemento al inicio */
+   gap: 15px; /* Espacio entre elementos */
+   display: flex; /* Display flex para organizar elementos */
+   padding: 0 1rem; /* Padding horizontal */
+}
+
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+/* Íconos de Material Icons */
+.material-icons-sharp {
+    font-size: 2rem; /* Tamaño de los íconos */
+    color: white; /* Color blanco */
+}
+
+/* Íconos activos */
+.material-icons-sharp.active {
+    color: #FFD700; /* Color dorado para el ícono activo */
+}
+
+/* Estilos del perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre la información y la foto */
+}
+
+.profile .info {
+    color: #fff; /* Color blanco */
+    text-align: right;
+}
+
+.profile .info p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.profile .info small {
+    font-size: 0.8rem;
+    color: #bbb; /* Color gris claro */
+}
+
+.profile-photo{
+    width: 150px; /* Ajusta el tamaño según necesites */
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo img{
+    padding-left: 2rem;
+    padding-top: 0rem;
+    width: 5rem;
+    height:3rem;
+}
+a{
+    color: #FBBD5D;
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+    z-index: 1
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: #FBBD5D;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: #FBBD5D;
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+.dark-mode .material-icons-sharp:last-child {
+    color: #333; /* Cambia el color del ícono dark_mode a un color oscuro */
+}
+.profile .info p {
+    color: #bbb; /* Color para "Hola" */
+}
+.profile .info p b {
+    color: #FBBD5D; /* Color para "Andreow" */
+}
+.profile .info small {
+    color: #bbb; /* Color para "perfil" */
+}
+.header .material-icons-sharp {
+    color: black; /* Cambia el color del icono a negro */
+}
+.header{
+    margin: 50px;
+}
+.body{
+    margin: 50px;
+}
+.analyse {
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas se ajusten si el espacio es reducido */
+    gap: 20px; /* Añade espacio entre las tarjetas */
+    justify-content: space-between;
+}
+
+.analyse .status {
+    margin-bottom: 15px; /* Espaciado adicional entre tarjetas */
+}
+.analyse {
+    margin-bottom: 20px; /* Espacio debajo de esta sección */
+}
+
+.new-money {
+    margin-bottom: 20px; /* Espacio debajo de esta sección */
+}
+
+.total-cash {
+    margin-bottom: 20px; /* Espacio debajo de esta sección */
+}
+.analyse .status, 
+.new-money .money, 
+.total-cash .cash {
+    padding: 10px; /* Espaciado interno dentro de cada tarjeta */
+    margin-bottom: 10px; /* Espacio externo entre las tarjetas */
+    margin: 20px;
+}
+.user-profile {
+    margin-top: 2000px; /* Espaciado para bajarlo un poco del límite superior */
+    position: relative; /* Asegura que siga el flujo normal del documento */
+}
+.user-profile .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* Estilos básicos para todos los elementos */
+*{
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    outline: 0; /* Elimina el contorno */
+    appearance: 0; /* Elimina la apariencia predeterminada */
+    border: 0; /* Elimina el borde */
+    text-decoration: none; /* Elimina el subrayado de enlaces */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+html{
+    font-size: 14px;
+}
+
+.profile-photo{
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para el cuerpo del documento */
+body{
+    width: 100vw; /* Ancho completo de la ventana */
+    height: 100vh; /* Altura completa de la ventana */
+    font-family: 'Poppins', sans-serif; /* Fuente utilizada */
+    font-size: 0.88rem; /* Tamaño de fuente */
+    user-select: none; /* Desactiva la selección de texto */
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    color: var(--color-dark); /* Color del texto */
+    background-color: var(--color-background); /* Color de fondo */
+}
+
+/* Estilos para los enlaces en sidebar */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #2B3D49;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #2B3D49; 
+    color: #0A2B59; 
+    border-radius: 20px; 
+    transform: translateX(-20px);
+}
+
+.sidebar a:hover .material-icons-sharp {
+    color: #FF8343;
+}
+
+.sidebar {
+    margin-left: 3rem;
+    padding-top: 3rem;
+    width: 15rem;
+}
+
+/* Estilos específicos para sidebar dentro de aside */
+aside {
+    height: 100vh;
+    width: 15rem;
+    flex-shrink: 0;
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #2B3D49;
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 88vh;
+    position: relative;
+    top: 7rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active {
+    color: #0A2B59;
+    background-color: var(--color-light);
+}
+
+aside .sidebar a.active::before {
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span {
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+    color: #FF8343;
+}
+
+aside .sidebar a:hover span {
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count {
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+/* Tipografía para títulos dentro de aside */
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+.container {
+    display: flex; /* Habilita Flexbox para alinear los hijos */
+    gap: 20px; /* Espaciado entre el aside (sidebar) y el main */
+}
+
+aside {
+    width: 250px; /* Ajusta el ancho del sidebar */
+    background-color: #f4f4f4; /* Opcional: fondo para distinguir */
+    padding: 10px; /* Espaciado interno */
+}
+.user-profile .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+main {
+    flex: 1; /* Toma el espacio restante disponible */
+    padding: 20px; /* Espaciado interno para el contenido */
+    background-color: #ffffff; /* Opcional: fondo para diferenciar */
+    margin-top: 20px;
+}
+/*SUBIR DESDE AQUI PARA ARRIBA*/
+main .analyse{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .analyse > div{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .analyse > div:hover{
+    box-shadow: none;
+}
+
+main .analyse > div .status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .analyse h3{
+    margin-left: 0.6rem;
+    font-size: 1rem;
+}
+
+main .analyse .progresss{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main .analyse svg{
+    width: 7rem;
+    height: 7rem;
+}
+
+main .analyse svg circle{
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+main .analyse .sales svg circle{
+    stroke: #003976; /* Cambia el color del borde del círculo */   
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .analyse .visits svg circle{
+    stroke: #3BAB12;
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .analyse .searches svg circle{
+    stroke: #FF3131;
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .analyse .progresss .percentage{
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+main .new-money{
+    margin-top: 1.3rem;
+}
+
+main .new-money .money-list{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .new-money .money-list:hover{
+    box-shadow: none;
+}
+
+main .new-money .money-list .user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .new-money .money-list .user img{
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.4rem;
+    border-radius: 50%;
+}
+
+
+
+main .total-cash{
+    margin-top: 1.3rem;
+}
+
+main .total-cash .cash-list{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .total-cash .cash-list:hover{
+    box-shadow: none;
+}
+
+main .total-cash .cash-list .cash{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .total-cash .cash-list .cash img{
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.4rem;
+    border-radius: 50%;
+}
+
+main .recent-orders{
+    margin-top: 1.3rem;
+}
+
+main .recent-orders h2{
+    margin-bottom: 0.8rem;
+}
+
+main .recent-orders table{
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+
+main .recent-orders table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .recent-orders a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-section .nav button{
+    display: none;
+}
+
+.right-section .dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .nav .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+
+.right-section .nav .profile .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.right-section .user-profile{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .user-profile:hover{
+    box-shadow: none;
+}
+
+.right-section .user-profile img{
+    width: 11rem;
+    height: auto;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+}
+
+.right-section .user-profile h2{
+    margin-bottom: 0.2rem;
+}
+
+.right-section .reminders{
+    margin-top: 2rem;
+}
+
+.right-section .reminders .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.right-section .reminders .header span{
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+.right-section .reminders .notification{
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .reminders .notification:hover{
+    box-shadow: none;
+}
+
+.right-section .reminders .notification .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.right-section .reminders .notification .icon{
+    padding: 0.6rem;
+    color: var(--color-white);
+    background-color: var(--color-success);
+    border-radius: 20%;
+    display: flex;
+}
+
+.right-section .reminders .notification.deactive .icon{
+    background-color: var(--color-danger);
+}
+
+.right-section .reminders .add-reminder{
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right-section .reminders .add-reminder:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.right-section .reminders .add-reminder div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+header {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo y texto de "Bienvenido" */
+header .logo {
+    flex-shrink: 0; /* Asegura que el logo no se reduzca */
+}
+
+header h2 {
+    font-size: 1.5rem;
+    flex-grow: 1; /* Para que el texto ocupe el espacio disponible */
+    margin-left: 33rem; /* Margen a la izquierda */
+    color: white; /* Color del texto */
+    font-size: 2rem; /* Tamaño de fuente */
+}
+/* Ajustes del logo para ser más flexible en dispositivos pequeños */
+@media screen and (max-width: 1430px) {
+    .container{
+        width: 95%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .analyse{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 40%;
+    }
+
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 0.8rem;
+    }
+
+    main .recent-orders table{
+        width: 83vw;
+    }
+
+    main table thead tr th:last-child,
+    main table thead tr th:first-child{
+        display: none;
+    }
+
+    main table tbody tr td:last-child,
+    main table tbody tr td:first-child{
+        display: none;
+    }
+
+}
+/* Tabletas: entre 768px y 1024px */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 150px;
+    }
+
+    .right-section {
+        width: 250px;
+    }
+
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .money, .cash {
+        width: 45%;
+    }
+
+    .sidebar a h3 {
+        font-size: 16px;
+    }
+}
+/* Pantallas grandes: de 1025px en adelante (escritorios) */
+@media (min-width: 1025px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .right-section {
+        width: 250px;
+    }
+
+    .money, .cash {
+        width: 30%;
+    }
+
+    .analyse, .new-money, .total-cash {
+        justify-content: space-between;
+    }
+}
+@media (max-width: 1024px) {
+    .profile .info p {
+        font-size: 0.8rem; /* Reduce el tamaño del texto "Hola, Andreow" */
+    }
+    .profile .info p b {
+        font-size: 0.9rem; /* Reduce el tamaño del nombre */
+    }
+    .profile .info small {
+        font-size: 0.7rem; /* Reduce el tamaño de "perfil" */
+    }
+}
+@media (max-width: 1024px) {
+    header h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del texto "Bienvenido" */
+        margin-left: 15rem; /* Ajusta el margen hacia la izquierda */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+/*ADICIONALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
+/*ADICIONALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
+/*ADICIONALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
+@media (max-width: 870px) {
+    aside {
+        display: none; /* Oculta el menú lateral completamente */
+    }
+    .container {
+        margin-left: 0; /* Elimina márgenes laterales */
+        padding-left: 0; /* Elimina padding del contenedor */
+        grid-template-columns: 1fr; /* Ajusta el diseño del contenedor */
+        padding-left: 0; /* Elimina cualquier espacio dejado por el aside */
+        flex-direction: column;
+        align-items: center; /* Alinear a la izquierda */
+    }
+    .main{
+        margin: 0;
+        padding: 0.5px;
+    }
+    header {
+        display: flex;
+        flex-direction: row; /* Asegura que los elementos estén en una sola fila */
+        align-items: center; /* Centra verticalmente los elementos */
+        justify-content: space-between; /* Reduce el espacio entre ellos */
+        padding: 5px 10px; /* Reduce el padding interno del header */
+        gap: 3px; /* Reduce el espacio entre elementos */
+    }
+
+    /* Ajustar el logo */
+    header .logo {
+        max-width: 80px; /* Reduce el tamaño del logo */
+        height: auto; /* Mantiene las proporciones */
+    }
+
+    /* Ajustar el texto "Hola Androw" */
+    header .welcome-text {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        margin-left: 500px; /* Reduce el espacio a la izquierda */
+    }
+
+    /* Ajustar el perfil y la foto */
+    header .profile {
+        display: flex;
+        align-items: center; /* Centra el texto y la foto */
+        gap: 5px; /* Reduce el espacio entre el nombre y la imagen */
+    }
+
+    header .profile img {
+        width: 30px; /* Reduce el tamaño de la imagen */
+        height: 30px; /* Hace la imagen cuadrada */
+        border-radius: 50%; /* Mantiene la forma circular */
+    }
+
+    /* Ajustar el icono (si está separado) */
+    header .icon {
+        display: none;
+        font-size: 0; /* Reduce el tamaño del ícono */
+        margin-left: 0px; /* Reduce el espacio a la izquierda */
+    }
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: flex-start; /* Alinear a la izquierda */
+        gap: 10px; /* Reducir espacio entre cuadros */
+        width: 100%; /* Asegurarse de ocupar todo el ancho disponible */
+    }
+    .analyse > div, 
+    .new-money .money, 
+    .total-cash .cash {
+        width: 100%; /* Reducir el ancho de los cuadros */
+        padding: 10px; /* Reducir padding interno */
+        margin: 0 auto; /* Centrar los cuadros */
+        transform: translateX(-10px); /* Desplazar ligeramente a la izquierda */
+    }
+
+    /* Reducir el tamaño del contenido dentro de los cuadros */
+    .analyse h3,
+    .new-money h3,
+    .total-cash h3 {
+        font-size: 0.7rem; /* Reducir tamaño del texto */
+    }
+
+    .analyse h1, 
+    .new-money h1, 
+    .total-cash h1 {
+        font-size: 1rem; /* Reducir encabezados */
+    }
+
+    .analyse .progresss, 
+    .new-money .progresss, 
+    .total-cash .progresss {
+        width: 50px; /* Reducir tamaño de los gráficos */
+        height: 50px;
+    }
+
+    .analyse .progresss svg circle {
+        stroke-width: 5; /* Reducir grosor del círculo */
+    }
+
+    .analyse .percentage,
+    .new-money .percentage,
+    .total-cash .percentage {
+        font-size: 0.8rem; /* Reducir tamaño del porcentaje */
+    }
+
+    .right-section {
+        width: 200px;
+    }
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .money, .cash {
+        width: 15%;
+    }
+
+    .sidebar a h3 {
+        font-size: 10px;
+    }
+    .material-icons-sharp,
+    .icon-class { /* Reemplaza `.icon-class` con la clase específica de tus íconos si no usas Material Icons */
+        height: 0px;
+        width: 0px;
+        margin-left: 0;
+    }
+    .material-icons-sharp.active{
+        height: 0px;
+        width: 0px;
+        margin-left: 0;
+    }
+    .material-icons-sharp:last-child{
+        height: 0px;
+        width: 0px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 870px) {
+    header h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del texto "Bienvenido" */
+        margin-left: 15rem; /* Ajusta el margen hacia la izquierda */
+    }
+}
+/*SECCION 600*/
+@media (max-width: 650px) {
+    aside {
+        display: none; /* Oculta el menú lateral completamente */
+    }
+    .container {
+        margin-left: 0; /* Elimina márgenes laterales */
+        padding-left: 0; /* Elimina padding del contenedor */
+        grid-template-columns: 1fr; /* Ajusta el diseño del contenedor */
+        padding-left: 0; /* Elimina cualquier espacio dejado por el aside */
+
+    }
+    .main {
+        width: 100%; /* Reduce el ancho del cuadro */
+        margin: 0 auto; /* Centra el cuadro */
+        padding: 5px; /* Reduce padding interno */
+        display: flex;
+    }
+
+    /* Ajustar los cuadros internos (Mis ingresos, gastos, etc.) */
+    .analyse, .new-money, .total-cash {
+        width: 300px; /* Reduce el ancho de los cuadros internos */
+ 
+    }
+
+    .analyse > div, .new-money > div, .total-cash > div {
+        padding: 5px; /* Reduce padding interno de los contenidos */
+    }
+
+    /* Ajustar los títulos y montos dentro de los cuadros */
+    .analyse h3, .new-money h3, .total-cash h3 {
+        font-size: 0.8rem; /* Tamaño más pequeño para los subtítulos */
+    }
+
+    .analyse h1, .new-money h1, .total-cash h1 {
+        font-size: 1rem; /* Reduce el tamaño del encabezado principal */
+    }
+
+    .analyse .progresss, .new-money .progresss, .total-cash .progresss {
+        width: 20px; /* Reduce gráficos circulares */
+        height: 20px;
+    }
+
+    /* Ajustar espacios entre elementos */
+    .main .analyse, .main .new-money, .main .total-cash {
+        gap: 4px; /* Reduce el espacio entre elementos internos */
+    }
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: left; /* Alinear a la izquierda */
+        gap: 3px; /* Reducir espacio entre cuadros */
+
+    }
+    .analyse > div, 
+    .new-money .money, 
+    .total-cash .cash {
+        padding: 3px; /* Reducir padding interno */
+        margin: 0 auto; /* Centrar los cuadros */
+        transform: translateX(-20px); /* Desplazar ligeramente a la izquierda */
+    }
+
+    /* Reducir el tamaño del contenido dentro de los cuadros */
+    .analyse h3,
+    .new-money h3,
+    .total-cash h3 {
+        font-size: 0.8rem; /* Reducir tamaño del texto */
+    }
+
+    .analyse h1, 
+    .new-money h1, 
+    .total-cash h1 {
+        font-size: 0.9rem; /* Reducir encabezados */
+    }
+
+    .analyse .progresss, 
+    .new-money .progresss, 
+    .total-cash .progresss {
+        width: 50px; /* Reducir tamaño de los gráficos */
+        height: 50px;
+    }
+
+    .analyse .progresss svg circle {
+        stroke-width: 4; /* Reducir grosor del círculo */
+    }
+
+    .analyse .percentage,
+    .new-money .percentage,
+    .total-cash .percentage {
+        font-size: 4; /* Reducir tamaño del porcentaje */
+    }
+
+    .right-section {
+        width: 250px;
+    }
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .money, .cash {
+        width: 10%;
+    }
+
+    .sidebar a h3 {
+        font-size: 3px;
+    }
+    header {
+        display: flex;
+       
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* Alinea el contenido de la derecha (perfil) a la derecha */
+    header .right-section {
+        display: flex;
+        justify-content: flex-end; /* Alinea el contenido de la derecha a la derecha */
+        align-items: center; /* Centra verticalmente */
+    }
+    
+    /* Estilo para el perfil dentro de la nav */
+    header .nav .profile {
+        display: flex;
+        align-items: center; /* Alinea el texto y la foto del perfil en el centro */
+    }
+
+}
+@media (max-width: 650px){
+    .right-section{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 650px){
+    .right-section nav{
+        align-items: right;
+    }
+}
+
+#grafico-pastel {
+    width: 400px !important;
+    height: 400px !important;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ========================= */
+/* Estilos para la tabla     */
+/* ========================= */
+.info-cuadro {
+    margin-top: 2rem;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+.info-cuadro:hover {
+    box-shadow: none;
+}
+
+.info-cuadro h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    text-align: center;
+}
+
+.info-cuadro table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: var(--border-radius-2);
+}
+
+.info-cuadro thead {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.info-cuadro thead th {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.info-cuadro tbody tr {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-light);
+    transition: background 0.2s ease;
+}
+
+.info-cuadro tbody tr:hover {
+    background-color: var(--color-light);
+}
+
+.info-cuadro tbody td {
+    padding: 0.9rem;
+    text-align: center;
+    color: var(--color-dark-variant);
+    font-size: 0.9rem;
+}
+
+/* Ajuste responsive */
+@media (max-width: 870px) {
+    .info-cuadro table,
+    .info-cuadro thead,
+    .info-cuadro tbody,
+    .info-cuadro th,
+    .info-cuadro td,
+    .info-cuadro tr {
+        display: block;
+        width: 100%;
+    }
+
+    .info-cuadro thead {
+        display: none;
+    }
+
+    .info-cuadro tbody tr {
+        margin-bottom: 1rem;
+        border: 1px solid var(--color-light);
+        border-radius: var(--border-radius-1);
+        padding: 0.8rem;
+        background-color: var(--color-white);
+    }
+
+    .info-cuadro tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .info-cuadro tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        top: 0.8rem;
+        font-weight: 600;
+        color: var(--color-dark);
+    }
+}
+

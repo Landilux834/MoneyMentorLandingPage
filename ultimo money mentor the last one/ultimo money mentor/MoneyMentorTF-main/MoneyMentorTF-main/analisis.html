@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/analisis.css">
+    <title>Analisis | AsmrProg</title>
+</head>
+<header>
+    <div class="toggle">
+        <div class="logo">
+            <img src="ihc_tf/Public/Assets/Img/logocortado.png">
+        </div>
+    </div>
+
+<!-- Right Section -->
+<div class="right-section">
+    <div class="nav">
+        <div class="profile">
+            <div class="info">
+                <p>Hola, <b><span id="username-display"></span></b></p>
+                <small class="text-muted">perfil</small>
+            </div>
+            <div class="profile-photo">
+                <img src="ihc_tf/Public/Assets/Img/daf.jpg">
+            </div>
+        </div>
+        </div>
+
+    </div>
+    <!-- final  Nav -->
+</header>
+
+<body>
+
+    <div class="container">
+        <aside>
+            <div class="sidebar">
+                <a href="menu.html" id="inicio_sidebar">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Inicio</h3>
+                </a>
+
+                <a href="calculadora.html">
+                    <span class="material-icons-sharp">calculate</span>
+                    <h3>Calculadora</h3>
+                </a>
+
+                <a href="calculadoraimpuesto.html">
+                    <span class="material-icons-sharp">request_quote</span>
+                    <h3>Impuestos</h3>
+                </a>
+
+                <a href="calendario.html">
+                    <span class="material-icons-sharp">calendar_month</span>
+                    <h3>Calendario</h3>
+                </a>
+
+                <a href="analisis.html">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Análisis</h3>
+                </a>
+
+                <a href="Gestion.html">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>operacion</h3>
+                </a>
+
+                <a href="Consejos.html">
+                    <span class="material-icons-sharp">quiz</span>
+                    <h3>Consejos</h3>
+                </a>
+
+                <a href="Perfil.html">
+                    <span class="material-icons-sharp">account_circle</span>
+                    <h3>Perfil</h3>
+                </a>
+
+                <a href="index.html">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+          <h2>Análisis de Operaciones</h2>
+          <canvas id="grafico-pastel" width="250" height="250"></canvas>
+
+          <section class="info-cuadro">
+            <h3>Detalle de Operaciones</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Tipo</th>
+                  <th>Monto</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody id="tabla-operaciones-analisis">
+                <!-- Se llenará dinámicamente -->
+              </tbody>
+            </table>
+          </section>
+        </main>
+        
+    </div>
+
+    <script src="ihc_tf/Public/Assets/Scripts/menu.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="ihc_tf/Public/Assets/Scripts/analisis.js"></script>
+ 
+</body>
+
+</html>
