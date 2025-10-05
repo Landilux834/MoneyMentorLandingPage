@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/calculadora.css">
+    
+    <title>MoneyMentor</title>
+</head>
+<header>
+    <div class="toggle">
+        <div class="logo">
+            <img src="ihc_tf/Public/Assets/Img/logocortado.png">
+        </div>
+    </div>
+    <h2>Bienvenido(a)</h2>
+
+<!-- Right Section -->
+<div class="right-section">
+    <div class="nav">
+        <button id="menu-btn">
+            <span class="material-icons-sharp">
+                menu
+            </span>
+        </button>
+        <div class="dark-mode">
+            <span class="material-icons-sharp active">
+                light_mode
+            </span>
+            <span class="material-icons-sharp">
+                dark_mode
+            </span>
+        </div>
+        
+        <div class="profile">
+            <div class="info">
+                <p>Hola, <b><span id="username-display"></span></b></p>
+                <small class="text-muted">perfil</small>
+            </div>
+            <div class="profile-photo">
+                <img src="ihc_tf/Public/Assets/Img/daf.jpg">
+            </div>
+        </div>
+
+    </div>
+    <!-- final  Nav -->
+</header>
+
+<body>
+
+    <div class="container">
+         <!-- Sidebar Section -->
+        <aside>
+            <div class="sidebar">
+                <a href="menu.html" id="inicio_sidebar">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Inicio</h3>
+                </a>
+
+                <a href="calculadora.html">
+                    <span class="material-icons-sharp">calculate</span>
+                    <h3>Calculadora</h3>
+                </a>
+
+                <a href="calculadoraimpuesto.html">
+                    <span class="material-icons-sharp">request_quote</span>
+                    <h3>Impuestos</h3>
+                </a>
+
+                <a href="calendario.html">
+                    <span class="material-icons-sharp">calendar_month</span>
+                    <h3>Calendario</h3>
+                </a>
+
+                <a href="analisis.html">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Análisis</h3>
+                </a>
+
+                <a href="Gestion.html">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>Operación</h3>
+                </a>
+
+                <a href="Consejos.html">
+                    <span class="material-icons-sharp">quiz</span>
+                    <h3>Consejos</h3>
+                </a>
+
+                <a href="Perfil.html">
+                    <span class="material-icons-sharp">account_circle</span>
+                    <h3>Perfil</h3>
+                </a>
+
+                <a href="index.html">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+    
+        <main>
+            <div class="calculadora">
+      
+              <div class="title-container">
+                <h1 class="title">Calculadora Financiera</h1>
+              </div>
+      
+              <form>
+      
+                <!-- Tipo moneda -->
+                <div class="col-md-2">
+                  <label for="tipoMoneda" class="form-label">Tipo de moneda</label>
+                  <select class="form-select" name="tipoMoneda" id="tipoMoneda">
+                    <option value="AED">AED</option>
+                    <option value="ARS">ARS</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="BSD">BSD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CLP">CLP</option>
+                    <option value="CNY">CNY</option>
+                    <option value="COP">COP</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="DOP">DOP</option>
+                    <option value="EGP">EGP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="FJD">FJD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="GTQ">GTQ</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF">HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR">INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY">JPY</option>
+                    <option value="KRW">KRW</option>
+                    <option value="KZT">KZT</option>
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PAB">PAB</option>
+                    <option value="PEN" selected>PEN</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PKR">PKR</option>
+                    <option value="PLN">PLN</option>
+                    <option value="PYG">PYG</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SAR">SAR</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="TWD">TWD</option>
+                    <option value="UAH">UAH</option>
+                    <option value="USD">USD</option>
+                    <option value="UYU">UYU</option>
+                    <option value="VND">VND</option>
+                    <option value="ZAR">ZAR</option>
+                  </select>
+                </div>
+      
+                <div class="col-md-4">
+                  <label for="monto" class="form-label">Monto</label>
+                  <input type="text" name="monto" id="monto" class="form-control">
+                </div>
+      
+                <div class="col-md-2">
+                  <label for="plazo" class="form-label">Cuotas</label>
+                  <input type="text" name="plazo" id="plazo" class="form-control">
+                </div>
+      
+                <div class="col-md-2">
+                  <label for="interes" class="form-label">Tasa de interés (%)</label>
+                  <input type="text" name="interes" id="interes" class="form-control">
+                </div>
+      
+                <div class="col-md-12 d-flex justify-content-center">
+                  <button type="button" id="calcularButton" class="btn btn-primary">Calcular</button>
+                </div>
+      
+                <div class="col-md-12 d-flex justify-content-center">
+                  <button type="button" id="limpiarButton" class="btn btn-primary">Limpiar</button>
+                </div>
+              </form>
+            </div>
+      
+            <div class="resultados">
+      
+              <!-- VALORES POR CUOTA -->
+      
+              <div class="col-md-4">
+                <label for="capitalCuota" class="form-label">Capital por cuota</label>
+                <input type="text" name="capitalCuota" id="capitalCuota" class="form-control" readonly>
+              </div>
+      
+              <div class="col-md-4">
+                <label for="interesCuota" class="form-label">Interés por cuota</label>
+                <input type="text" name="interesCuota" id="interesCuota" class="form-control" readonly>
+              </div>
+      
+              <div class="col-md-4">
+                <label for="cuotaindividual" class="form-label">Monto a pagar por Cuota</label>
+                <input type="text" name="cuotaindividual" id="cuotaindividual" class="form-control" readonly>
+              </div>
+      
+      
+              <!-- VALORES TOTALES -->
+      
+              <div class="col-md-4">
+                <label for="capitalTotal" class="form-label">Capital total a pagar</label>
+                <input type="text" name="capitalTotal" id="capitalTotal" class="form-control" readonly>
+              </div>
+      
+              <div class="col-md-4">
+                <label for="interestotal" class="form-label">Interés total a pagar</label>
+                <input type="text" name="interestotal" id="interestotal" class="form-control" readonly>
+              </div>
+      
+              <div class="col-md-4">
+                <label for="totalpagar" class="form-label">Monto total a pagar</label>
+                <input type="text" name="totalpagar" id="totalpagar" class="form-control" readonly>
+              </div>
+      
+              <div class="col-md-2">
+                <label for="tipoMonedaDatosCalculados" class="form-label">Tipo de moneda de los datos calculados</label>
+                <select class="form-select" name="tipoMonedaDatosCalculados" id="tipoMonedaDatosCalculados">
+                  <option value="AED">AED</option>
+                  <option value="ARS">ARS</option>
+                  <option value="AUD">AUD</option>
+                  <option value="BGN">BGN</option>
+                  <option value="BRL">BRL</option>
+                  <option value="BSD">BSD</option>
+                  <option value="CAD">CAD</option>
+                  <option value="CHF">CHF</option>
+                  <option value="CLP">CLP</option>
+                  <option value="CNY">CNY</option>
+                  <option value="COP">COP</option>
+                  <option value="CZK">CZK</option>
+                  <option value="DKK">DKK</option>
+                  <option value="DOP">DOP</option>
+                  <option value="EGP">EGP</option>
+                  <option value="EUR">EUR</option>
+                  <option value="FJD">FJD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="GTQ">GTQ</option>
+                  <option value="HKD">HKD</option>
+                  <option value="HRK">HRK</option>
+                  <option value="HUF">HUF</option>
+                  <option value="IDR">IDR</option>
+                  <option value="ILS">ILS</option>
+                  <option value="INR">INR</option>
+                  <option value="ISK">ISK</option>
+                  <option value="JPY">JPY</option>
+                  <option value="KRW">KRW</option>
+                  <option value="KZT">KZT</option>
+                  <option value="MXN">MXN</option>
+                  <option value="MYR">MYR</option>
+                  <option value="NOK">NOK</option>
+                  <option value="NZD">NZD</option>
+                  <option value="PAB">PAB</option>
+                  <option value="PEN" selected>PEN</option>
+                  <option value="PHP">PHP</option>
+                  <option value="PKR">PKR</option>
+                  <option value="PLN">PLN</option>
+                  <option value="PYG">PYG</option>
+                  <option value="RON">RON</option>
+                  <option value="RUB">RUB</option>
+                  <option value="SAR">SAR</option>
+                  <option value="SEK">SEK</option>
+                  <option value="SGD">SGD</option>
+                  <option value="THB">THB</option>
+                  <option value="TRY">TRY</option>
+                  <option value="TWD">TWD</option>
+                  <option value="UAH">UAH</option>
+                  <option value="USD">USD</option>
+                  <option value="UYU">UYU</option>
+                  <option value="VND">VND</option>
+                  <option value="ZAR">ZAR</option>
+                </select>
+              </div>
+      
+            </div>
+      
+          </main>
+                     
+    </div>
+    <script src="ihc_tf/Public/Assets/Scripts/acceso.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="ihc_tf/Public/Assets/Scripts/calculadora.js"></script>
+    <script src="ihc_tf/Public/Assets/Scripts/menu.js"></script>   
+</body>
+
+</html>

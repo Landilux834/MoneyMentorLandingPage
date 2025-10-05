@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/acceso.css">
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <!-- Formulario de inicio de sesión -->
+          <form id="sign-in-form" class="sign-in-form">
+            <h2 class="title">Iniciar sesión</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="login-username" placeholder="Usuario" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="login-password" placeholder="Contraseña" required />
+            </div>
+            <button type="submit" class="btn solid">Iniciar Sesión</button>
+            <p class="social-text">Iniciar sesión con</p>
+            <div class="social-media">
+              <a onclick="simulateLogin('Facebook')" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a onclick="simulateLogin('Twitter')" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a onclick="simulateLogin('Google')" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a onclick="simulateLogin('Linkedin')" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            
+          </form>
+
+          <!-- Formulario de registro -->
+          <form id="sign-up-form" class="sign-up-form">
+            <h2 class="title">Regístrate</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="register-username" placeholder="Usuario" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="register-email" placeholder="Correo" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="register-password" placeholder="Contraseña" required />
+            </div>
+            <button type="submit" class="btn solid">Registrarse</button>
+            <p class="social-text">Regístrate con</p>
+            <div class="social-media">
+              <a onclick="simulateLogin('Facebook')" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a onclick="simulateLogin('Twitter')" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a onclick="simulateLogin('Google')" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a onclick="simulateLogin('Linkedin')" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Paneles para alternar entre los formularios -->
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>¿Eres nuevo?</h3>
+            <p>
+              ¡Únete a nuestra comunidad y comienza a mejorar tus finanzas hoy!
+            </p>
+            <button class="btn transparent" id="toggle-sign-up">
+              Registrate
+            </button>
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>¿Ya tienes cuenta?</h3>
+            <p>
+              Ingresa para seguir gestionando tus finanzas de manera eficiente.
+            </p>
+            <button class="btn transparent" id="toggle-sign-in">
+              Iniciar Sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="ihc_tf/Public/Assets/Scripts/acceso.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  </body>
+</html>
